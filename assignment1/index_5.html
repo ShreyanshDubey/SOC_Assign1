@@ -1,0 +1,50 @@
+<html>      
+    <h1>My First sub-window</h1>
+    <script>
+    function display1()
+    {
+       document.getElementById("f1").src="https://www.bing.com";
+    }
+    function display2()
+    {
+        document.getElementById("f1").src="https://www.wikipedia.org/";
+    }
+    function display3()
+    {
+        document.getElementById("f1").src="https://www.bbc.com/";
+    }
+    function display4()
+    {
+        document.getElementById("f1").src="https://www.iitk.ac.in/";
+    }
+    function display5()
+    {
+        var data=document.getElementById("tf1").value;
+        document.getElementById("f1").src=data;
+    }
+    function resize()
+    {
+        var data=document.getElementById("w1").value;
+        document.getElementById("f1").width=data;
+        var data=document.getElementById("h1").value;
+        document.getElementById("f1").height=data;
+    }
+    </script>
+    <ol>
+        <li><input type="button" value="bing" onclick="display1()"></li>
+        <li><input type="button" value="wikipedia" onclick="display2()"></li>
+        <li><input type="button" value="bbc" onclick="display3()"></li>
+        <li><input type="button" value="iitk" onclick="display4()"></li>
+        <li><input type="text" value="Some other website" id="tf1">
+        <input type ="button" value="GO" onclick='display5()'></li>
+        <li><input type="text" value="width" id="w1"><input type="text" value="height" id="h1">
+        <input type="button" value="resize" onclick="resize()"></li>
+
+    </ol>
+    <iframe src="https://www.wikipedia.org/"
+    height="20%"
+    width="30%"
+    align ="center"
+    id="f1">
+    </iframe>
+</html>                     
